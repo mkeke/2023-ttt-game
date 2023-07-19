@@ -1,0 +1,88 @@
+* { margin: 0; padding: 0; }
+ul { list-style: none; }
+html, body { height: 100%; }
+
+/* colors, borders */
+body { 
+  background-color: #222; 
+  color: black; 
+}
+.layout { 
+  background-color: red; 
+}
+button.start {
+  background-color: lightgreen;
+  border: 1px solid green;
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+.board button {
+  background-color: white;
+  border: 2px solid black; 
+  border-radius: 15px; 
+}
+
+/* font + sizes */
+body, button { font-family: 'Courier New', Courier, monospace; text-align: center; }
+.layout { font-size: min(3vh, 3vw); }
+button.start { font-size: min(4vh, 4vw); }
+
+/* parent 1:1 centered */
+.layout {
+  aspect-ratio: 1;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: min(2vh, 2vw);
+}
+
+h1, p {
+  margin-bottom: min(1.5vh, 1.5vw);
+}
+.board {
+  width: 70%; aspect-ratio: 1;
+  position: absolute;
+  left: 15%; bottom: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 4px;
+}
+.board button {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.board:after {
+  position: absolute;
+  left: 0; top: 0; width: 100%; aspect-ratio: 1;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: min(8vh, 8vw);
+  font-weight: bold;
+  -webkit-text-stroke: min(0.2vh, 0.2vw) black;
+  pointer-events: none;
+}
+
+.board.won:after {
+  content: 'YOU WON!';
+  color: lightgreen;
+}
+.board.lost:after {
+  content: 'YOU LOST!';
+  color: red;
+}
+.board.draw:after {
+  content: 'TRY AGAIN!';
+  color: yellow;
+}
+footer {
+  position: absolute;
+  right: 1%; bottom: 1%;
+  font-size: min(1.5vh, 1.5vw);
+}

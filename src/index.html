@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1">
+
+
+  <!-- for Google -->
+  <meta name="description" content="Tic-Tac-Toe" />
+  <meta name="keywords" content="tic-tac-toe,game,ai,minmax,html,css,svg,javascript" />
+
+  <meta name="author" content="Simen Lysebo" />
+  <meta name="copyright" content="" />
+
+  <!-- for Facebook -->          
+  <meta property="og:title" content="Tic-Tac-Toe" />
+  <meta property="og:type" content="game" />
+  <meta property="og:image" content="https://lysebo.xyz/games/ttt/icon.png" />
+  <meta property="og:url" content="https://lysebo.xyz/games/ttt" />
+  <meta property="og:description" content="Tic-Tac-Toe game against AI. Created by Simen Lysebo." />
+
+
+  <title>Tic-Tac-Toe</title>
+  <style class="once">/* one-time generated css */</style>
+  <style class="runtime">/* runtime generated css */</style>
+  <link rel="stylesheet" href="css/main.css" />
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <div class="layout">
+    <h1>Tic-Tac-Toe</h1>
+    <p>
+      Starting player: 
+      <input type="radio" name="player" id="player-user" value="user" checked>
+      <label for="player-user">You</label>
+      <input type="radio" name="player" id="player-computer" value="computer">
+      <label for="player-computer">CPU</label>
+    </p>
+    <p>
+      <button class="start">Start</button>
+    </p>
+    <div class="board"></div>
+    <footer>Created by Simen Lysebo, July 2023</footer>
+  </div>
+</body>
